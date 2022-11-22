@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'mobils.apps.MobilsConfig',
     'readcsv.apps.ReadcsvConfig',
     'readjson.apps.ReadjsonConfig',
+    'readxml.apps.ReadxmlConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
