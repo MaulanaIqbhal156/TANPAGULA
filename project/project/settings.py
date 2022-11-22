@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-@rv5e7$r8i8n$d9ir35@8x+%lev=45ydy6yy6=$9(4#ph2miv=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['']
-
-
+ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'mobils.apps.MobilsConfig',
+    'readcsv.apps.ReadcsvConfig',
+    'readjson.apps.ReadjsonConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -105,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'
 
 USE_I18N = True
 

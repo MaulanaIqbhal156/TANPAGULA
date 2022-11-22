@@ -1,13 +1,17 @@
 from django.contrib import admin
-from django.urls import path
-# from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.urls import path, include
 
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('superuser/', admin.site.urls),
     path("", views.welcome),
+    path('mobils/', include('mobils.urls', namespace='mobils')),
+    path('readcsv/', include('readcsv.urls', namespace='readcsv')),
+    path('readjson/', include('readjson.urls', namespace='readjson'))
+    
+
 ]
 
 
-# urlpatterns += staticfiles_urlpatterns()
+
