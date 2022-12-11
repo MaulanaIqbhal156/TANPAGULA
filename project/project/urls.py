@@ -8,8 +8,7 @@ urlpatterns = [
     path("", views.welcome),
     path('mobils/', include('mobils.urls', namespace='mobils')),
     path('readcsv/', include('readcsv.urls', namespace='readcsv')),
-    path('readjson/', include('readjson.urls', namespace='readjson')),
-    path('readxml/', include('readxml.urls', namespace='readxml'))
+    path('readjson/', include('readjson.urls', namespace='readjson'))
     
 
 ]
