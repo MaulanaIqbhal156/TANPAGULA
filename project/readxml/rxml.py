@@ -1,23 +1,34 @@
-import xml.etree.ElementTree as ET
-tree = ET.parse('static/Cars.xml')
-root = tree.getroot()
+import xmltodict
 
-# import xml.dom.minidom as minidom
+rows = []
 
+with open('static/Cars.xml', 'r') as file:
+    myfile = file.read()
 
-# docs = minidom.parse('static/Cars.xml')
+mydict = xmltodict.parse(myfile)
 
-
-# idnya = docs.getElementsByTagName('Id')
-
-# for idn in idnya[1:]:
-# 	print(idn.firstChild.data)
-
-# namanya = docs.getElementsByTagName('Name')
-# for namae in namanya[1:]:
-# 	print(namae.firstChild.data)
+# rows = list(mydict["row"])
+data = mydict["root"]["row"]
+rows = data[1:]
 
 
-# pricenya = docs.getElementsByTagName('Price')
-# for pricee in pricenya[1:]:
-# 	print(pricee.firstChild.data)
+# import xml.etree.ElementTree as ET
+# tree = ET.parse('static/Cars.xml')
+
+# roots = tree.getroot()
+
+# from xml.dom.minidom import parse
+# import xml.dom.minidom
+
+# DOMTree = xml.dom.minidom.parse('static/Cars.xml', 'r')
+# collection = DOMTree.documentElement
+
+# if collection.hasAttribute("shelf"):
+#     print (collection.getAttribute('shelf'))
+
+# datas = collection.getElementsByTagName("row")[1:]
+
+# for data in datas:
+#     print(".........Mobil.........")
+#     idnya = data.getElementsByTagName("Id")[0]
+#     print("Id : %s" % idnya.childNodes[0].data)
